@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vier Räume – tägliche Klarheit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🏡 Vier Räume – tägliche Klarheit</h1>
+    <p>Jeden Raum einmal am Tag vollständig frei erleben</p>
+  </header>
+
+  <main>
+    <section id="rooms">
+      <div class="room" onclick="toggleRoom(this, 'Schlafzimmer')">
+        🛏️ <strong>Schlafzimmer</strong><br>
+        <small>Bett gemacht, Ablagen leer, Luft ruhig</small>
+      </div>
+      <div class="room" onclick="toggleRoom(this, 'Wohnzimmer')">
+        🛋️ <strong>Wohnzimmer</strong><br>
+        <small>Tischflächen frei, keine herumliegenden Dinge</small>
+      </div>
+      <div class="room" onclick="toggleRoom(this, 'Küche')">
+        🍽️ <strong>Küche</strong><br>
+        <small>Spüle leer, Ablagen abgewischt</small>
+      </div>
+      <div class="room" onclick="toggleRoom(this, 'Bad')">
+        🚿 <strong>Bad</strong><br>
+        <small>Flächen trocken, Handtuch hängt, Duft ruhig</small>
+      </div>
+    </section>
+
+    <section id="summary">
+      <h2>Heute</h2>
+      <p id="summaryText">Noch kein Raum vollständig frei.</p>
+      <button onclick="resetDay()">🔄 Neuer Tag</button>
+    </section>
+
+    <section id="stats">
+      <h2>Verlauf der letzten 7 Tage</h2>
+      <canvas id="chart" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Sevu | Lebensfreude Zuhause</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
